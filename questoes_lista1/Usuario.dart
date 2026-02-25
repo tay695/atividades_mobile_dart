@@ -9,7 +9,7 @@ class Usuario {
   }
 
   Usuario.convidado() 
-      : nome = "tainara", 
+      : nome = "Guest", 
         senha = "123456";
   
 }
