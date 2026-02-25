@@ -1,5 +1,6 @@
 import 'Produto.dart';
 import 'Usuario.dart';
+import 'controleRemoto.dart';
 void main() {
   var produto1 = Produto(
     'Macarrão', 
@@ -26,4 +27,16 @@ void main() {
   user2.exibirUsuario();
   convidado.exibirUsuario();
 
+
+  var meuControle = ControleRemoto();
+
+  print('Volume inicial: ${meuControle.volumeAtual}');
+
+  meuControle.aumentar();
+  meuControle.aumentar();
+
+  meuControle.diminuir();
+
+  
+  print('Volume final: ${meuControle.volumeAtual}');
 }
