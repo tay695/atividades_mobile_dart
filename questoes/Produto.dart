@@ -1,22 +1,18 @@
 class Produto {
-  // Atributos (características)
   String nome;
   double preco;
   int quantidade;
   bool disponivel;
   double imposto;
 
-  // Construtor: Define como o objeto é criado
-  // Usamos {} para parâmetros nomeados, conforme sua dúvida anterior
   Produto(
     this.nome, {
     required this.preco,
     this.quantidade = 0,
     this.disponivel = true,
-    this.imposto = 0.10, // 10% por padrão
+    this.imposto = 0.10,
   });
 
-  // Método: Um comportamento da classe (substitui a lógica solta)
   double calcularValorEstoque() {
     return preco * quantidade;
   }
@@ -29,7 +25,6 @@ class Produto {
     return disponivel && (preco < 100);
   }
 
-  // A função 'exibirDetalhes' agora vira um método da classe
   void exibirDetalhes() {
     print('--- Relatório do Produto: $nome ---');
     print('Preço Base: R\$ ${preco.toStringAsFixed(2)}');

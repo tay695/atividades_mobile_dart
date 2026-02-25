@@ -1,5 +1,5 @@
 import 'Produto.dart';
-
+import 'Usuario.dart';
 void main() {
   var produto1 = Produto(
     'Macarrão', 
@@ -16,4 +16,14 @@ void main() {
 
   produto1.exibirDetalhes();
   produto2.exibirDetalhes();
+
+
+  var user = Usuario('Alice', 'senha123');
+  var user2 = Usuario('Bob', 'senha456');
+  var convidado = Usuario.convidado();
+
+  user.exibirUsuario();
+  user2.exibirUsuario();
+  convidado.exibirUsuario();
+
 }
